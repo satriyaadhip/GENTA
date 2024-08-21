@@ -12,8 +12,10 @@
             								<thead>
             									<tr>
             										<th>No</th>
-            										<th>Jenis Surat</th>
+													<th>Tanggal Lapor</th>
             										<th>Nomor Surat</th>
+													<th>Tanggal Meninggal</th>
+													<th>Sebab Meninggal</th>
             										<th>Status</th>
             										<th>Preview Data</th>
             										<th>Aksi</th>
@@ -24,10 +26,10 @@
 												foreach ($datas as $data) { ?>
             										<tr>
             											<td><?= $n ?></td>
-            											<td>
-            												<?= $data->jenis_surat ?>
-            											</td>
+														<td><?= $data->tanggal_surat ?></td>
             											<td><?= $data->nomor_surat ?></td>
+														<td><?= $data->tanggal_meninggal . ' ' . $data->jam_meninggal ?></td>
+														<td><?= $data->sebab_meninggal ?></td>
             											<td>
             												<?php
 															if ($data->status == 'Menunggu Verifikasi') {

@@ -114,7 +114,7 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                         </a>
                         <ul class="submenu
                         <?=
-                        $this->uri->segment(1) == 'verifikasi-surat-domisili' ||
+                            $this->uri->segment(1) == 'verifikasi-surat-domisili' ||
                             $this->uri->segment(1) == 'verifikasi-surat-usaha' ||
                             $this->uri->segment(1) == 'verifikasi-surat-tidak-mampu' ||
                             $this->uri->segment(1) == 'verifikasi-surat-keterangan-pengantar' ||

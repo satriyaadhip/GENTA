@@ -131,7 +131,7 @@
             					<div class="card">
             						<div class="card-body bg-success">
             							<h4 class="font-bold text-white">SELAMAT DATANG DI APLIKASI PELAYANAN SURAT</h4>
-            							<h5 class="font-bold text-white">DESA BsRANTAKSEKARJATI - SUKOHARJO</h5>
+            							<h5 class="font-bold text-white">GENTAN - SUKOHARJO</h5>
             						</div>
             					</div>
             				</div>
@@ -194,8 +194,17 @@
             							<h5 class="font-bold text-white">DESA GENTAN - SUKOHARJO</h5>
             						</div>
             					</div>
-            					<div class="card mt-2">
-            						<div class="card-body bg-primary">
+            					<div class="card">
+									<div class="col-12 row p-3">
+										<div class="col-9" style="background-color: blue;">
+											<p>addaa</p>
+										</div>
+
+										<div class="col-3" style="background-color: blue;">
+											<p>ada</p>
+										</div>
+									</div>
+            						<!-- <div class="card-body bg-primary">
             							<h2 class="text-center font-bold text-dark">PROSEDUR PERMOHONAN SURAT</h1>
             								<hr>
             								<div class="row">
@@ -228,7 +237,7 @@
             										</div>
             									</div>
             								</div>
-            						</div>
+            						</div> -->
             					</div>
             				</div>
             			</div>
