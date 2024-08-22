@@ -22,13 +22,13 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="">Nama Almarhum / Almarhumah</label>
+                                                    <label for="">Nama Almarhum/Almarhumah</label>
                                                     <input type="text" name="nama_alm" class="form-control" value="<?= set_value('nama_alm') ?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="">Bin / Binti</label>
+                                                    <label for="">Bin/binti</label>
                                                     <input type="text" name="bin" class="form-control" value="<?= set_value('bin') ?>" required>
                                                 </div>
                                             </div>

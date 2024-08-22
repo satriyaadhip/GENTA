@@ -1,18 +1,22 @@
 <div class="main-content container-fluid">
-	<div class="page-title">
+	<!-- <div class="page-title">
 		<h6><strong>Surat Pengantar Akte Kelahiran</strong></h6>
-	</div>
+	</div> -->
 	<section class="section">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-9 mx-auto">
 				<div class="btn-group">
 					<a
 						href="<?= base_url('list-surat') ?>"
-						class="btn btn-warning btn-sm mb-3"
+						class="btn-md mb-3 p-3 text-dark"
+						style="
+						background-color: white;
+						border-radius: 30px;
+						"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
+							width="24"
+							height="24"
 							fill="currentColor"
 							class="bi bi-arrow-left-circle-fill"
 							viewBox="0 0 16 16"
@@ -20,13 +24,16 @@
 							<path
 								d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
 							/>
-						</svg>
-						Kembali</a
+						</svg><span class="ml-2 mt-4"><strong>Kembali</strong></span></a
 					>
 				</div>
-				<div class="card ml-5 mr-5">
+				<div class="card shadow-none" style="border-radius: 20px;">
 					<div class="card-body">
-						<form action="<?= base_url('spak/proses') ?>" method="post"	enctype="multipart/form-data">
+						<form
+							action="<?= base_url('spak/proses') ?>"
+							method="post"
+							enctype="multipart/form-data"
+						>
 							<div class="form-group">
 								<label for="">Nama</label>
 								<input
@@ -39,31 +46,36 @@
 							<div class="form-group">
 								<label for="">NIK</label>
 								<input
-									type="text"
+									type="number"
 									name="user_nik"
 									class="form-control"
 									value="<?= set_value('user_nik') ?>"
 								/>
 							</div>
 
-							<div class="form-group">
-								<label for="">Tempat Lahir</label>
-								<input
-									type="text"
-									name="user_tempatlahir"
-									class="form-control"
-									value="<?= set_value('user_tempatlahir') ?>"
-								/>
-							</div>
-
-							<div class="form-group">
-								<label for="">Tanggal Lahir</label>
-								<input
-									type="date"
-									name="user_ttl"
-									class="form-control"
-									value="<?= set_value('user_ttl') ?>"
-								/>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">Tempat Lahir</label>
+										<input
+											type="text"
+											name="user_tempatlahir"
+											class="form-control"
+											value="<?= set_value('user_tempatlahir') ?>"
+										/>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">Tanggal Lahir</label>
+										<input
+											type="date"
+											name="user_ttl"
+											class="form-control"
+											value="<?= set_value('user_ttl') ?>"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<div class="form-group">
@@ -81,7 +93,8 @@
 									type="text"
 									name="user_agama"
 									class="form-control"
-									value="<?= set_value('user_agama') ?>"y
+									value="<?= set_value('user_agama') ?>"
+									y
 								/>
 							</div>
 							<div class="form-group">
@@ -93,6 +106,42 @@
 									value="<?= set_value('user_pekerjaan') ?>"
 								/>
 							</div>
+							
+							<div class="form-group">
+								<label for="">Alamat Rumah</label>
+								<input
+									type="text"
+									name="user_alamat"
+									class="form-control"
+									value="<?= set_value('user_alamat') ?>"
+								/>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">RT</label>
+										<input
+											type="number"
+											name="user_tempatlahir"
+											class="form-control"
+											value="<?= set_value('user_rt') ?>"
+										/>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">RW</label>
+										<input
+											type="number"
+											name="user_ttl"
+											class="form-control"
+											value="<?= set_value('user_rw') ?>"
+										/>
+									</div>
+								</div>
+							</div>
+							
 							<h6 class="text-center">Data Ayah & Ibu</h6>
 							<div class="form-group">
 								<label for="">Nama Ayah</label>
