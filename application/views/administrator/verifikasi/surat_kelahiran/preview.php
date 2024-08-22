@@ -12,34 +12,34 @@
                                         <table class="table" style="width:100%">
                                             <?php foreach ($datas as $data) { ?>
                                                 <tr>
-                                                    <td>Nik</td>
+                                                    <td>NIK</td>
                                                     <td>:</td>
-                                                    <td><?= $data->nik ?></td>
+                                                    <td><?= $data->user_nik ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Nama</td>
                                                     <td>:</td>
-                                                    <td><?= $data->nama ?></td>
+                                                    <td><?= $data->user_nama ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Jenis Kelamin</td>
                                                     <td>:</td>
-                                                    <td><?= $data->jekel ?></td>
+                                                    <td><?= $data->user_jekel ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Agama</td>
                                                     <td>:</td>
-                                                    <td><?= $data->agama ?></td>
+                                                    <td><?= $data->user_agama ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>TTL</td>
                                                     <td>:</td>
-                                                    <td><?= $data->tempat_lahir ?>, <?= $data->tgl_lahir ?></td>
+                                                    <td><?= $data->user_tempatlahir ?>, <?= $data->user_ttl ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Perkerjaan</td>
                                                     <td>:</td>
-                                                    <td><?= $data->pekerjaan ?></td>
+                                                    <td><?= $data->user_pekerjaan ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Rt</td>
@@ -54,7 +54,7 @@
                                                 <tr>
                                                     <td>Alamat</td>
                                                     <td>:</td>
-                                                    <td><?= $data->alamat ?></td>
+                                                    <td><?= $data->user_alamat ?></td>
                                                 </tr>
 
                                                 <tr>

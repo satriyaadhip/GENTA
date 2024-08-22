@@ -65,18 +65,19 @@ class Spak extends CI_Controller
 
 		if ($this->form_validation->run() == TRUE) {
 
-			$this->session->set_flashdata('error', 'Data tidak lengkap !');
+			$this->session->set_flashdata('error', 'Data tidak lengkap, silahkan cek ulang.');
 			$this->index();
 		} else {
 
 			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SPAK</span> karena masih ada yang belum terverifikasi !');
+				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SPAK</span> karena masih ada yang belum terverifikasi!');
 				redirect('list-surat', 'refresh');
 			} else {
 				$user_nama = $this->input->post('user_nama');
 				$user_nik = $this->input->post('user_nik');
 				$user_jekel = $this->input->post('user_jekel');
 				$user_ttl = $this->input->post('user_ttl');
+				$user_tempatlahir = $this->input->post('user_tempatlahir');
 				$user_agama = $this->input->post('user_agama');
 				$user_pekerjaan = $this->input->post('user_pekerjaan');
 				$ayah = $this->input->post('ayah');
@@ -141,6 +142,7 @@ class Spak extends CI_Controller
 						'user_nama'          =>  $user_nama,
 						'user_nik'          =>  $user_nik,
 						'user_jekel'          =>  $user_jekel,
+						'user_tempatlahir'          =>  $user_tempatlahir,
 						'user_ttl'          =>  $user_ttl,
 						'user_agama'          =>  $user_agama,
 						'user_pekerjaan'          =>  $user_pekerjaan,			

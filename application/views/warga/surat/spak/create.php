@@ -26,11 +26,7 @@
 				</div>
 				<div class="card ml-5 mr-5">
 					<div class="card-body">
-						<form
-							action="<?= base_url('spak/proses') ?>"
-							method="post"
-							enctype="multipart/form-data"
-						>
+						<form action="<?= base_url('spak/proses') ?>" method="post"	enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="">Nama</label>
 								<input
@@ -41,7 +37,7 @@
 								/>
 							</div>
 							<div class="form-group">
-								<label for="">Nik</label>
+								<label for="">NIK</label>
 								<input
 									type="text"
 									name="user_nik"
@@ -49,6 +45,27 @@
 									value="<?= set_value('user_nik') ?>"
 								/>
 							</div>
+
+							<div class="form-group">
+								<label for="">Tempat Lahir</label>
+								<input
+									type="text"
+									name="user_tempatlahir"
+									class="form-control"
+									value="<?= set_value('user_tempatlahir') ?>"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="">Tanggal Lahir</label>
+								<input
+									type="date"
+									name="user_ttl"
+									class="form-control"
+									value="<?= set_value('user_ttl') ?>"
+								/>
+							</div>
+
 							<div class="form-group">
 								<label for="">Jenis Kelamin</label>
 								<select name="user_jekel" class="form-control" required>
@@ -57,16 +74,7 @@
 									<option value="Perempuan">Perempuan</option>
 								</select>
 							</div>
-							<div class="form-group">
-								<label for="">Tempat, Tanggal Lahir</label>
-								<input
-									type="date"
-									name="user_ttl"
-									class="form-control"
-									value="<?= set_value('user_ttl') ?>"
-								/>
-							</div>
-							
+
 							<div class="form-group">
 								<label for="">Agama</label>
 								<input
@@ -119,7 +127,7 @@
 								/>
 							</div>
 							<small class="text-danger"><?php form_error('no_kk') ?></small>
-							<h6 class="text-center">Data Bayi / Anak</h6>
+							<h6 class="text-center">Data Bayi</h6>
 							<div class="form-group">
 								<label for="">Nama Bayi</label>
 								<input
