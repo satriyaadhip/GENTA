@@ -94,7 +94,7 @@ class Skk extends CI_Controller
 		} else {
 
 			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKK</span> karena masih ada yang belum terverivikasi !');
+				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKK</span> karena masih ada yang belum terverifikasi !');
 				redirect('list-surat', 'refresh');
 			} else {
 

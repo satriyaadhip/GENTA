@@ -114,7 +114,7 @@ class Warga extends CI_Controller
 				'alamat' => $alamat,
 				'created_at' => date('Y-m-d H:i:s')
 			);
-			$this->session->set_flashdata('success', 'Data warga berhasil di simpan !');
+			$this->session->set_flashdata('success', 'Data warga berhasil di simpan');
 			$this->M_warga->create($data);
 			redirect('data-warga');
 		}

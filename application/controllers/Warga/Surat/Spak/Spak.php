@@ -12,7 +12,7 @@ class Spak extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Surat Pegantar Akte Kelahiran',
+			'title' => 'GENTA - Surat Pengantar Akte Kelahiran',
 			'data'  => $this->M_getData->getDataId()
 		);
 
@@ -59,21 +59,26 @@ class Spak extends CI_Controller
 		$this->form_validation->set_rules('alamat_b', 'Alamat', 'required', [
 			'required' => 'Alamat harus diisi!'
 		]);
-		$this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi !'));
+		// $this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi!'));
 
 		$cek = $this->M_surat->cek_spak();
 
-		if ($this->form_validation->run() == FALSE) {
+		if ($this->form_validation->run() == TRUE) {
 
 			$this->session->set_flashdata('error', 'Data tidak lengkap !');
 			$this->index();
 		} else {
 
 			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SPAK</span> karena masih ada yang belum terverivikasi !');
+				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SPAK</span> karena masih ada yang belum terverifikasi !');
 				redirect('list-surat', 'refresh');
 			} else {
-
+				$user_nama = $this->input->post('user_nama');
+				$user_nik = $this->input->post('user_nik');
+				$user_jekel = $this->input->post('user_jekel');
+				$user_ttl = $this->input->post('user_ttl');
+				$user_agama = $this->input->post('user_agama');
+				$user_pekerjaan = $this->input->post('user_pekerjaan');
 				$ayah = $this->input->post('ayah');
 				$ibu = $this->input->post('ibu');
 				$no_kk = $this->input->post('no_kk');
@@ -133,6 +138,12 @@ class Spak extends CI_Controller
 						'keperluan'     => $keperluan,
 						'file_kk'       => $filekk,
 						'file_ktp'      => $filektp,
+						'user_nama'          =>  $user_nama,
+						'user_nik'          =>  $user_nik,
+						'user_jekel'          =>  $user_jekel,
+						'user_ttl'          =>  $user_ttl,
+						'user_agama'          =>  $user_agama,
+						'user_pekerjaan'          =>  $user_pekerjaan,			
 						'status'        => 'Menunggu Verifikasi',
 						'created_at'    => date('Y-m-d H:i:s')
 					);

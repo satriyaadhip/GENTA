@@ -60,12 +60,13 @@
 							<div class="form-group">
 								<label for="">Tempat, Tanggal Lahir</label>
 								<input
-									type="text"
+									type="date"
 									name="user_ttl"
 									class="form-control"
 									value="<?= set_value('user_ttl') ?>"
 								/>
 							</div>
+							
 							<div class="form-group">
 								<label for="">Agama</label>
 								<input
