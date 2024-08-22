@@ -47,14 +47,14 @@ class Warga extends CI_Controller
 						'is_login'  => TRUE
 					);
 					$this->session->set_userdata($userLogin);
-					$this->session->set_flashdata('success', 'Login berhasil !');
+					$this->session->set_flashdata('success', 'Selamat datang kembali.');
 					redirect('dashboard', 'refresh');
 				} else {
-					$this->session->set_flashdata('danger', 'Oppss... Password anda salah !');
+					$this->session->set_flashdata('danger', 'Password salah, coba lagi.');
 					redirect('user/login', 'refresh');
 				}
 			} else {
-				$this->session->set_flashdata('error', 'Oppss... Email anda tidak terdaftar atau salah !  !');
+				$this->session->set_flashdata('error', 'Email tidak terdaftar atau salah.');
 				redirect('user/login', 'refresh');
 			}
 		}

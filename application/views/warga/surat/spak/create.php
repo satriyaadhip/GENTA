@@ -82,21 +82,22 @@
 								<label for="">Jenis Kelamin</label>
 								<select name="user_jekel" class="form-control" required>
 									<option selected>Pilih Jenis Kelamin</option>
-									<option value="Laki - Laki">Laki - Laki</option>
+									<option value="Laki - Laki">Laki-laki</option>
 									<option value="Perempuan">Perempuan</option>
 								</select>
 							</div>
-
+							
 							<div class="form-group">
 								<label for="">Agama</label>
-								<input
-									type="text"
-									name="user_agama"
-									class="form-control"
-									value="<?= set_value('user_agama') ?>"
-									y
-								/>
+								<select name="user_agama" class="form-control" id="" required>
+									<option selected disabled>Pilih agama</option>
+									<option value="Islam">Islam</option>
+									<option value="Kristen">Kristen</option>
+									<option value="Hindu">Hindu</option>
+									<option value="Buddha">Buddha</option>
+								</select>
 							</div>
+
 							<div class="form-group">
 								<label for="">Pekerjaan</label>
 								<input
@@ -106,15 +107,19 @@
 									value="<?= set_value('user_pekerjaan') ?>"
 								/>
 							</div>
-							
+
 							<div class="form-group">
-								<label for="">Alamat Rumah</label>
-								<input
-									type="text"
+								<label for="">Alamat rumah</label>
+								<textarea
 									name="user_alamat"
+									id=""
+									cols="30"
+									rows="5"
 									class="form-control"
-									value="<?= set_value('user_alamat') ?>"
-								/>
+									required
+								>
+<?= set_value('user_alamat') ?></textarea
+								>
 							</div>
 
 							<div class="row">
@@ -123,7 +128,7 @@
 										<label for="">RT</label>
 										<input
 											type="number"
-											name="user_tempatlahir"
+											name="user_rt"
 											class="form-control"
 											value="<?= set_value('user_rt') ?>"
 										/>
@@ -134,7 +139,7 @@
 										<label for="">RW</label>
 										<input
 											type="number"
-											name="user_ttl"
+											name="user_rw"
 											class="form-control"
 											value="<?= set_value('user_rw') ?>"
 										/>
@@ -300,7 +305,7 @@
 							>
 							<div class="form-group">
 								<label for="">Foto Kartu Keluarga</label>
-								<small class="text-danger">*Wajib. JPG|PNG</small>
+								<small class="text-danger">*Wajib dalam format JPG atau PNG</small>
 								<input
 									type="file"
 									name="file_kk"

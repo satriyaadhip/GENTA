@@ -78,8 +78,11 @@ class Spak extends CI_Controller
 				$user_jekel = $this->input->post('user_jekel');
 				$user_ttl = $this->input->post('user_ttl');
 				$user_tempatlahir = $this->input->post('user_tempatlahir');
-				$user_agama = $this->input->post('user_agama');
 				$user_pekerjaan = $this->input->post('user_pekerjaan');
+				$user_agama = $this->input->post('user_agama');
+				$user_alamat = $this->input->post('user_alamat');
+				$user_rt = $this->input->post('user_rt');
+				$user_rw = $this->input->post('user_rw');
 				$ayah = $this->input->post('ayah');
 				$ibu = $this->input->post('ibu');
 				$no_kk = $this->input->post('no_kk');
@@ -145,7 +148,10 @@ class Spak extends CI_Controller
 						'user_tempatlahir'          =>  $user_tempatlahir,
 						'user_ttl'          =>  $user_ttl,
 						'user_agama'          =>  $user_agama,
-						'user_pekerjaan'          =>  $user_pekerjaan,			
+						'user_pekerjaan'          =>  $user_pekerjaan,
+						'user_alamat'          =>  $user_alamat,	
+						'user_rt'          =>  $user_rt,	
+						'user_rw'          =>  $user_rw,				
 						'status'        => 'Menunggu Verifikasi',
 						'created_at'    => date('Y-m-d H:i:s')
 					);
