@@ -12,7 +12,7 @@ class Skd extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Surat Keterangan Domisili',
+			'title' => 'GENTA | Surat Keterangan Pindah',
 			'data'  => $this->M_getData->getDataId()
 		);
 
@@ -24,21 +24,31 @@ class Skd extends CI_Controller
 
 	public function create()
 	{
-		$this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi !'));
+		$this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi!'));
 
 		$cek = $this->M_surat->cek_skd();
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('error', 'Data tidak lengkap !');
+			$this->session->set_flashdata('error', 'Data tidak lengkap!');
 			$this->index();
 		} else {
 
 			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKD</span> karena masih ada yang belum terverifikasi !');
+				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKD</span> karena masih ada yang belum terverifikasi!');
 				redirect('list-surat', 'refresh');
 			} else {
 
 				$keperluan = $this->input->post('keperluan');
+				$user_nama = $this->input->post('user_nama');
+				$user_nik = $this->input->post('user_nik');
+				$user_jekel = $this->input->post('user_jekel');
+				$user_tempatlahir = $this->input->post('user_tempatlahir');
+				$user_ttl = $this->input->post('user_ttl');
+				$user_agama = $this->input->post('user_agama');
+				$user_pekerjaan = $this->input->post('user_pekerjaan');
+				$user_alamat = $this->input->post('user_alamat');
+				$user_rt = $this->input->post('user_rt');
+				$user_rw = $this->input->post('user_rw');
 				$file_kk = $_FILES['file_kk']['name'];
 				$file_ktp = $_FILES['file_ktp']['name'];
 
@@ -74,6 +84,16 @@ class Skd extends CI_Controller
 						'keperluan'     => $keperluan,
 						'file_kk'       => $filekk,
 						'file_ktp'      => $filektp,
+						'user_nama'          =>  $user_nama,
+						'user_nik'          =>  $user_nik,
+						'user_jekel'          =>  $user_jekel,
+						'user_tempatlahir'          =>  $user_tempatlahir,
+						'user_ttl'          =>  $user_ttl,
+						'user_agama'          =>  $user_agama,
+						'user_pekerjaan'          =>  $user_pekerjaan,
+						'user_alamat'          =>  $user_alamat,	
+						'user_rt'          =>  $user_rt,	
+						'user_rw'          =>  $user_rw,	
 						'status'        => 'Menunggu Verifikasi',
 						'created_at'    => date('Y-m-d H:i:s')
 					);
