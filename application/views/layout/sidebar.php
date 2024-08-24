@@ -56,31 +56,22 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                             ? 'active ' : ''
                         ?>">
                             <li>
-                                <a href="<?= base_url('verifikasi-surat-tidak-mampu') ?>">Surat Tidak Mampu
-                                    <span class="badge badge bg-danger text-white"><?= $Sktm['jumlah'] ?></span></a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('verifikasi-surat-usaha') ?>">Surat Usaha
-                                    <span class="badge badge bg-danger text-white"><?= $Sku['jumlah'] ?></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('verifikasi-surat-domisili') ?>">Surat Domisili
+                                <a href="<?= base_url('verifikasi-surat-domisili') ?>">Surat Keterangan Pindah
                                     <span class="badge badge bg-danger text-white"><?= $Skd['jumlah'] ?></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url('verifikasi-surat-keterangan-pengantar') ?>">Keterangan Pengantar
+                                <a href="<?= base_url('verifikasi-surat-keterangan-pengantar') ?>">Surat Keterangan Pengantar
                                     <span class="badge badge bg-danger text-white"><?= $Skp['jumlah'] ?></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url('verifikasi-surat-kelahiran') ?>">Surat Kelahiran
+                                <a href="<?= base_url('verifikasi-surat-kelahiran') ?>">Surat Akte Kelahiran
                                     <span class="badge badge bg-danger text-white"><?= $Spak['jumlah'] ?></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url('verifikasi-surat-kematian') ?>">Surat Kematian
+                                <a href="<?= base_url('verifikasi-surat-kematian') ?>">Surat Keterangan Kematian
                                     <span class="badge badge bg-danger text-white"><?= $Skk['jumlah'] ?></span></a>
                             </li>
                         </ul>

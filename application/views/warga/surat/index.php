@@ -35,14 +35,14 @@
                                 </div>
                             </div>
                         </a> -->
-                        <!-- <a href="<?= base_url('skd/buat-surat') ?>" class="mb-3">
+                        <a href="<?= base_url('skd/buat-surat') ?>" class="mb-3">
                             <div class="unread custom-alert-3 bg-white" role="alert">
                                 <div class="alert-text w-75 mt-2 p-4 d-flex flex-row">
                                     <img src="<?= base_url() ?>./assets/icons/envelope.png" class="img-icon">
-                                    <h6 class="font-bold ml-3 my-auto">Surat Keterangan Domisili</h6>
+                                    <h6 class="font-bold ml-3 my-auto">Surat Keterangan Pindah</h6>
                                 </div>
                             </div>
-                        </a> -->
+                        </a>
                         <a href="<?= base_url('skp/buat-surat') ?>" class="mb-3">
                             <div class="unread custom-alert-3 bg-white" role="alert">
                                 <div class="alert-text w-75 mt-2 p-4 d-flex flex-row">
@@ -55,7 +55,7 @@
                             <div class="unread custom-alert-3 bg-white" role="alert">
                                 <div class="alert-text w-75 mt-2 p-4 d-flex flex-row">
                                     <img src="<?= base_url() ?>./assets/icons/envelope.png" class="img-icon">
-                                    <h6 class="font-bold ml-3 my-auto">Surat Pengantar Akte Kelahiran</h6>
+                                    <h6 class="font-bold ml-3 my-auto">Surat Keterangan Akte Kelahiran</h6>
                                 </div>
                             </div>
                         </a>

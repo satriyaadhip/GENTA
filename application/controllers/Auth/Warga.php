@@ -31,7 +31,7 @@ class Warga extends CI_Controller
 		$password = $this->input->post('password');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('error', 'Oppss... Terdapat kesalahan !');
+			$this->session->set_flashdata('error', 'Terjadi kesalahan pada login.');
 			$this->index();
 		} else {
 			$userLogin = $this->M_auth->loginUser($email);
