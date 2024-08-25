@@ -3,11 +3,11 @@
         		<div class="col-md-5 col-sm-12 mx-auto">
         			<div class="card pt-2">
         				<div class="card-body">
+							<small>User</small>
         					<div class="text-center mb-2">
         						<img src="<?= base_url() ?>./assets/logo/jpr.png" height="100" class='mb-3'>
         						<!-- <h3>Sign In</h3> -->
-        						<h5><strong>APLIKASI PELAYANAN SURAT</strong></h5>
-        						<h6><strong>DESA GENTAN</strong></h6>
+        						<h6><strong>LOGIN</strong></h6>
 
         					</div>
         					<form action="<?= base_url('user-login-proses'); ?>" method="post" enctype="multipart/form-data">
@@ -36,7 +36,7 @@
 
         						<div class='form-check clearfix my-4'>
         							<div class="float-right">
-        								Belum punya akun ? <a href="<?= base_url('user/register') ?>">Register disini !</a>
+        								Belum punya akun?<br><a href="<?= base_url('user/register') ?>">Register</a>
         							</div>
         						</div>
         						<div class="clearfix">
