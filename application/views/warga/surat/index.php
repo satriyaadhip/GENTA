@@ -65,7 +65,7 @@
 				<div class="col-sm-12 col-lg-3 p-4 card shadow-none mx-auto" style="border-radius: 18px">
 					<div class="page-title">
 						<h5>
-							<strong>Pilih salah satu layanan surat berikut dibawah ini.</strong>
+							<strong>Butuh bantuan? </strong>
 						</h5>
 					</div>
 				</div>

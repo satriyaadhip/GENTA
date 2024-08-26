@@ -13,7 +13,119 @@
                             <div class="card ml-5 mr-5">
                                 <div class="card-body">
                                     <form action="<?= base_url('skk/proses') ?>" method="post" enctype="multipart/form-data">
-                                        <p class="text-center">Hubungan dengan yang meninggal</p>
+                                        <p class="text-center">Nama Pelapor</p>
+                                        <div class="form-group">
+								<label for="">Nama</label>
+								<input
+									type="text"
+									name="user_nama"
+									class="form-control"
+									value="<?= set_value('user_nama') ?>"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="">NIK</label>
+								<input
+									type="number"
+									name="user_nik"
+									class="form-control"
+									value="<?= set_value('user_nik') ?>"
+								/>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">Tempat Lahir</label>
+										<input
+											type="text"
+											name="user_tempatlahir"
+											class="form-control"
+											value="<?= set_value('user_tempatlahir') ?>"
+										/>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">Tanggal Lahir</label>
+										<input
+											type="date"
+											name="user_ttl"
+											class="form-control"
+											value="<?= set_value('user_ttl') ?>"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="">Jenis Kelamin</label>
+								<select name="user_jekel" class="form-control" required>
+									<option selected>Pilih Jenis Kelamin</option>
+									<option value="Laki - Laki">Laki-laki</option>
+									<option value="Perempuan">Perempuan</option>
+								</select>
+							</div>
+							
+							<div class="form-group">
+								<label for="">Agama</label>
+								<select name="user_agama" class="form-control" id="" required>
+									<option selected disabled>Pilih agama</option>
+									<option value="Islam">Islam</option>
+									<option value="Kristen">Kristen</option>
+									<option value="Hindu">Hindu</option>
+									<option value="Buddha">Buddha</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="">Pekerjaan</label>
+								<input
+									type="text"
+									name="user_pekerjaan"
+									class="form-control"
+									value="<?= set_value('user_pekerjaan') ?>"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label for="">Alamat rumah</label>
+								<textarea
+									name="user_alamat"
+									id=""
+									cols="30"
+									rows="5"
+									class="form-control"
+									required
+								>
+<?= set_value('user_alamat') ?></textarea
+								>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">RT</label>
+										<input
+											type="number"
+											name="user_rt"
+											class="form-control"
+											value="<?= set_value('user_rt') ?>"
+										/>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<label for="">RW</label>
+										<input
+											type="number"
+											name="user_rw"
+											class="form-control"
+											value="<?= set_value('user_rw') ?>"
+										/>
+									</div>
+								</div>
+							</div>
                                         <div class="form-group">
                                             <label for="">Hubungan dengan yang meninggal <small class="text-danger">(*Harus dengan ahli waris.)</small></label>
                                             <input type="text" name="hubungan" class="form-control" value="<?= set_value('hubungan') ?>" required>
@@ -133,7 +245,7 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label for="">Jam Meninggal</label>
-                                                    <input type="time" name="jam_meninggal" class="form-control" value="<?= set_value('jam_meninggal') ?>" required>
+                                                    <input step="1" type="time" name="jam_meninggal" class="form-control" value="<?= set_value('jam_meninggal') ?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">

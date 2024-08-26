@@ -77,7 +77,7 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                         </ul>
                     </li>
 
-                    <li class="sidebar-item  <?= $this->uri->segment(1) == 'data-warga' || $this->uri->segment(1) == 'tambah-data-warga' || $this->uri->segment(1) == 'edit-warga' || $this->uri->segment(1) == 'detail-warga' ? 'active ' : '' ?>">
+                    <!-- <li class="sidebar-item  <?= $this->uri->segment(1) == 'data-warga' || $this->uri->segment(1) == 'tambah-data-warga' || $this->uri->segment(1) == 'edit-warga' || $this->uri->segment(1) == 'detail-warga' ? 'active ' : '' ?>">
                         <a href="<?= base_url('data-warga') ?>" class='sidebar-link'>
                             <i class="bi bi-people-fill"></i>
                             <span>Data Warga</span>
@@ -88,7 +88,7 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                             <i class="bi bi-person-lines-fill"></i>
                             <span>Data Users</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="sidebar-item  <?= $this->uri->segment(1) == 'data-administrator' ? 'active ' : '' ?>">
                         <a href="<?= base_url('data-administrator') ?>" class='sidebar-link'>
                             <i class="bi bi-person-circle"></i>

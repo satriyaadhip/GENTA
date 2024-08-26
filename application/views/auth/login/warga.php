@@ -15,7 +15,7 @@
         							<label for="username">Alamat Email</label>
         							<div class="position-relative">
         								<input type="email" name="email" class="form-control" id="username">
-        								<div class="form-control-icon">
+        								<div class="form-controls-icon">
         									<i data-feather="envelope"></i>
         								</div>
         								<small class="text-center"><?= form_error('email') ?></small>

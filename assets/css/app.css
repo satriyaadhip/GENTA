@@ -1314,8 +1314,10 @@ footer {
 /** 4.1 Auth Pages **/
 #auth {
   background: #6c757d;
-  min-height: 100vh;
-  padding-top: 100px;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(../images/background/auth.jpg);
 }
 #auth .card {

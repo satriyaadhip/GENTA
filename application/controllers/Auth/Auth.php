@@ -9,7 +9,7 @@ class Auth extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Silahkan Login'
+			'title' => 'GenTA | Gentan Administrasi Terpadu'
 		);
 
 		$this->load->view('auth/layout/header', $data);

@@ -23,10 +23,10 @@
                         <td>
                             <center>
                                 <strong>
-                                    <h5>PEMERINTAHAN KABUPATEN SUKOHARJO</h5>
-                                    <h5>KECAMATAN BULU</h5>
-                                    <h5>DESA GENTAN</h5>
-                                    <small>Jalan Serut Raya No. 1 Kode Pos : 59464</small>
+                                    <h5><b>PEMERINTAHAN KABUPATEN SUKOHARJO</b></h5>
+                                    <h5><b>KECAMATAN BULU</b></h5>
+                                    <h5><b>DESA GENTAN</b></h5>
+                                    <small>Jalan Batu Seribu No 10 Tlpn - Email<br>gentan3311022003@gmail.com Kode Pos 57563</small>
                                 </strong>
                             </center>
                         </td>
@@ -60,32 +60,32 @@
                         <tr>
                             <td>Nama</td>
                             <td>: </td>
-                            <td><?= $d->nama ?></td>
+                            <td><?= $user_nama ?></td>
                         </tr>
                         <tr>
                             <td>NIK</td>
                             <td>: </td>
-                            <td><?= $d->nik ?></td>
+                            <td><?= $user_nik ?></td>
                         </tr>
                         <tr>
                             <td>Tempat/Tanggal Lahir</td>
                             <td>: </td>
-                            <td><?= $d->tempat_lahir ?>, <?= $d->tgl_lahir ?></td>
+                            <td><?= $user_tempat_lahir ?>, <?= $user_tgl_lahir ?></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
                             <td>: </td>
-                            <td><?= $d->jekel ?></td>
+                            <td><?= $user_jekel ?></td>
                         </tr>
                         <tr>
                             <td>Pekerjaan</td>
                             <td>: </td>
-                            <td><?= $d->pekerjaan ?></td>
+                            <td><?= $user_pekerjaan ?></td>
                         </tr>
                         <tr>
                             <td>Agama</td>
                             <td>: </td>
-                            <td><?= $d->agama ?></td>
+                            <td><?= $user_agama ?></td>
                         </tr>
                         <tr>
                             <td>Status Pernikahan</td>
@@ -93,20 +93,20 @@
                             <td><?= $d->status_pernikahan ?></td>
                         </tr>
                         <tr>
-                            <td>Rt/Rw</td>
+                            <td>RT/RW</td>
                             <td>: </td>
-                            <td><?= $d->rt ?>/<?= $d->rw ?></td>
+                            <td><?= $user_rt ?>/<?= $user_rw ?></td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
                             <td>: </td>
-                            <td><?= $d->alamat ?></td>
+                            <td><?= $user_alamat ?></td>
                         </tr>
                     <?php } ?>
                 </table>
                 <br>
                 <p>Demikian ini menerangkan bahwa benar yang bersangkutan berdomisili
-                    di Desa Brantakskarjati, Kecamatan Bulu, Kabupaten Sukoharjo:</p>
+                    di Desa Gentan, Kecamatan Bulu, Kabupaten Sukoharjo:</p>
                 <table class="ms-5">
                     <?php foreach ($data as $d) { ?>
                         <p class="fw-bold">Surat keterangan ini dibuat untuk <span><?= $d->keperluan ?></span></p>
