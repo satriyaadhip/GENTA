@@ -114,15 +114,6 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                             ? 'active ' : ''
                         ?>">
                             <li>
-                                <a href="<?= base_url('verifikasi-surat-tidak-mampu') ?>">Surat Tidak Mampu
-                                    <span class="badge badge bg-danger text-white"><?= $Sktm['jumlah'] ?></span></a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('verifikasi-surat-usaha') ?>">Surat Usaha
-                                    <span class="badge badge bg-danger text-white"><?= $Sku['jumlah'] ?></span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="<?= base_url('verifikasi-surat-domisili') ?>">Surat Domisili
                                     <span class="badge badge bg-danger text-white"><?= $Skd['jumlah'] ?></span>
                                 </a>
@@ -181,7 +172,7 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                         <div class="avatar mr-1">
                             <img src="<?= base_url(); ?>./assets/images/avatar/avatar-s-1.png" alt="" srcset="">
                         </div>
-                        <div class="d-none d-md-block d-lg-inline-block">Hi, <?= $this->session->userdata('nama') ?></div>
+                        <div class="d-none d-md-block d-lg-inline-block"><small><?= $this->session->userdata('nama') ?></small></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <!-- <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>

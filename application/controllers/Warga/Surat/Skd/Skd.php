@@ -70,7 +70,7 @@ class Skd extends CI_Controller
 
 
 				if ($file_kk == '' || $file_ktp == '') {
-					$this->session->set_flashdata('error', 'File tidak lengkap !');
+					$this->session->set_flashdata('error', 'File tidak lengkap!');
 					redirect('skd/create', 'refresh');
 				} else {
 					$noid = $this->M_getData->getSkdId();

@@ -7,14 +7,12 @@
 							<h2><strong>GenTA</strong></h2>
 							<h6>Gentan Administrasi Terpadu</h6>
 						</div>
-						<div class="form-group position-relative has-icon-left" style="margin-top: 20vh;">
+						<div class="form-group position-relative has-icon-left" style="margin-top: 5vh;">
 						<!-- <div class="card shadow-none mt-3">
 							<div class="card-body">
 								<div class="container px-lg-12">
 									<div class="row justify-content-center align-items-center">
-										<div class="col">
-											<a class="btn btn-success btn-sm font-bold text-dark" href="<?= base_url('user/login') ?>">Warga</a>
-										</div>
+										
 										<div class="col">
 											<a class="btn btn-warning btn-sm font-bold text-dark" href="<?= base_url('administrator/login') ?>">Administrator</a>
 										</div>
@@ -22,6 +20,10 @@
 								</div>
 							</div>
 						</div> -->
+
+						<div class="col">
+											<a class="btn btn-success btn-sm font-bold text-dark" href="<?= base_url('user/login') ?>">Warga</a>
+										</div>
 						<form action="<?= base_url('administrator-login-proses'); ?>" method="post" enctype="multipart/form-data">
 								<label for="username">Alamat Email</label>
 								<div class="position-relative">

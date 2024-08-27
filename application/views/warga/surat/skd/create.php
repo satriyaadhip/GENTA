@@ -80,7 +80,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Keperluan Permohonan Surat</label>
-                                            <small class="text-danger">*Wajib !</small>
+                                            <small class="text-danger">*Wajib</small>
                                             <textarea name="keperluan" id="" cols="30" rows="5" class="form-control" required><?= set_value('keperluan') ?></textarea>
                                         </div>
                                         <div class="form-group">

@@ -26,7 +26,17 @@ class SuratDomisili extends CI_Controller
     {
         $data = array(
             'title' => 'Cetak Keterangan Surat Domisili',
-            'data'  => $this->M_cetak->cetakSkd($id)
+            'data'  => $this->M_cetak->cetakSkd($id),
+            'user_nama'          =>  $user_nama,
+						'user_nik'          =>  $user_nik,
+						'user_jekel'          =>  $user_jekel,
+						'user_tempatlahir'          =>  $user_tempatlahir,
+						'user_ttl'          =>  $user_ttl,
+						'user_agama'          =>  $user_agama,
+						'user_pekerjaan'          =>  $user_pekerjaan,
+						'user_alamat'          =>  $user_alamat,	
+						'user_rt'          =>  $user_rt,	
+						'user_rw'          =>  $user_rw
         );
 
         $this->load->view('warga/history/skd/print', $data);
