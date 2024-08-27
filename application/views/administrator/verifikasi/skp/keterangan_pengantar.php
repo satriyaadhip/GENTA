@@ -24,9 +24,6 @@
 												foreach ($datas as $data) { ?>
             										<tr>
             											<td><?= $n ?></td>
-            											<td>
-            												<?= $data->jenis_surat ?>
-            											</td>
             											<td><?= $data->nomor_surat ?></td>
             											<td>
             												<?php

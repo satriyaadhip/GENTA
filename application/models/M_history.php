@@ -12,6 +12,8 @@ class M_history extends CI_Model
     {
         $this->db->order_by('id', 'DESC');
         $this->db->where('id_warga', $this->session->userdata('id_warga'));
+        $query = $this->db->get_where('users', array('id' => $user_id));
+    return $query->row_array();
         return $this->db->get('surat_domisili')->result();
     }
 

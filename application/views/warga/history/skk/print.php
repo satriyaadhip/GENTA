@@ -59,22 +59,32 @@
                         <tr>
                             <td>Nama</td>
                             <td>: </td>
-                            <td><?= $d->nama ?></td>
+                            <td><?= $d -> user_nama ?></td>
                         </tr>
                         <tr>
                             <td>NIK</td>
                             <td>: </td>
-                            <td><?= $d->nik ?></td>
+                            <td><?= $d -> user_nik ?></td>
                         </tr>
                         <tr>
                             <td>Tempat/Tanggal Lahir</td>
                             <td>: </td>
-                            <td><?= $d->tempat_lahir ?>, <?= $d->tgl_lahir ?></td>
+                            <td><?= $d -> user_tempatlahir ?>, <?= $d -> user_ttl ?></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>: </td>
+                            <td><?= $d -> user_jekel ?></td>
+                        </tr>
+                        <tr>
+                            <td>RT/RW</td>
+                            <td>: </td>
+                            <td><?= $d -> user_rt ?>/<?= $d -> user_rw ?></td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
                             <td>: </td>
-                            <td><?= $d->alamat ?></td>
+                            <td><?= $d -> user_alamat ?></td>
                         </tr>
                         <tr>
                             <td>Hubungan dengan yang meninggal</td>
@@ -134,7 +144,7 @@
                 </p>
                 <br>
                 <div class="kades float-end">
-                    <span class="mb-n2">Berantakskarjati, <?= date('d M Y') ?></span>
+                    <span class="mb-n2">Sukoharjo, <?= date('d M Y') ?></span>
                     <p>KEPALA DESA GENTAN</p>
                     <img src="<?= base_url('./assets/ttd/ttd.png') ?>" class="ttd-kades" width="80%" style="margin-top: -25px; z-index:9999;">
                     <p class="fw-bold" style="margin-top: -30px; z-index:2;">HARJANTO, S.E</p>

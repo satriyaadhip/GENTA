@@ -60,47 +60,42 @@
                         <tr>
                             <td>Nama</td>
                             <td>: </td>
-                            <td><?= $user_nama ?></td>
+                            <td><?= $d -> user_nama ?></td>
                         </tr>
                         <tr>
                             <td>NIK</td>
                             <td>: </td>
-                            <td><?= $user_nik ?></td>
+                            <td><?= $d -> user_nik ?></td>
                         </tr>
                         <tr>
                             <td>Tempat/Tanggal Lahir</td>
                             <td>: </td>
-                            <td><?= $user_tempat_lahir ?>, <?= $user_tgl_lahir ?></td>
+                            <td><?= $d -> user_tempatlahir ?>, <?= $d -> user_ttl ?></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
                             <td>: </td>
-                            <td><?= $user_jekel ?></td>
+                            <td><?= $d -> user_jekel ?></td>
                         </tr>
                         <tr>
                             <td>Pekerjaan</td>
                             <td>: </td>
-                            <td><?= $user_pekerjaan ?></td>
+                            <td><?= $d -> user_pekerjaan ?></td>
                         </tr>
                         <tr>
                             <td>Agama</td>
                             <td>: </td>
-                            <td><?= $user_agama ?></td>
-                        </tr>
-                        <tr>
-                            <td>Status Pernikahan</td>
-                            <td>: </td>
-                            <td><?= $d->status_pernikahan ?></td>
+                            <td><?= $d->user_agama ?></td>
                         </tr>
                         <tr>
                             <td>RT/RW</td>
                             <td>: </td>
-                            <td><?= $user_rt ?>/<?= $user_rw ?></td>
+                            <td><?= $d -> user_rt ?>/<?= $d -> user_rw ?></td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
                             <td>: </td>
-                            <td><?= $user_alamat ?></td>
+                            <td><?= $d -> user_alamat ?></td>
                         </tr>
                     <?php } ?>
                 </table>
@@ -119,7 +114,7 @@
                 </p>
                 <br>
                 <div class="kades float-end">
-                    <span class="mb-n2">Berantakskarjati, <?= date('d M Y') ?></span>
+                    <span class="mb-n2">Sukoharjo, <?= date('d M Y') ?></span>
                     <p>KEPALA DESA GENTAN</p>
                     <img src="<?= base_url('./assets/ttd/ttd.png') ?>" class="ttd-kades" width="80%" style="margin-top: -25px; z-index:9999;">
                     <p class="fw-bold text-center" style="margin-top: -30px; z-index:2;">HARJANTO, S.E.</p>

@@ -119,7 +119,7 @@
                 </p>
                 <br>
                 <div class="kades float-end">
-                    <span class="mb-n2">Berantakskarjati, <?= date('d M Y') ?></span>
+                    <span class="mb-n2">Sukoharjo, <?= date('d M Y') ?></span>
                     <p>KEPALA DESA GENTAN</p>
                     <img src="<?= base_url('./assets/ttd/ttd.png') ?>" class="ttd-kades" width="80%" style="margin-top: -25px; z-index:9999;">
                     <p class="fw-bold" style="margin-top: -30px; z-index:2;">HARJANTO, S.E</p>
