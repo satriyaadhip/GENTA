@@ -42,6 +42,17 @@ class Keterangan_pengantar extends CI_Controller
 				$file_kk = $_FILES['file_kk']['name'];
 				$file_ktp = $_FILES['file_ktp']['name'];
 
+				$user_nama = $this->input->post('user_nama');
+				$user_nik = $this->input->post('user_nik');
+				$user_jekel = $this->input->post('user_jekel');
+				$user_ttl = $this->input->post('user_ttl');
+				$user_tempatlahir = $this->input->post('user_tempatlahir');
+				$user_pekerjaan = $this->input->post('user_pekerjaan');
+				$user_agama = $this->input->post('user_agama');
+				$user_alamat = $this->input->post('user_alamat');
+				$user_rt = $this->input->post('user_rt');
+				$user_rw = $this->input->post('user_rw');
+
 				$date = date('Ymd-is');
 				$d2 = trim($date);
 				//acak nama gambar
@@ -72,6 +83,16 @@ class Keterangan_pengantar extends CI_Controller
 						'nomor_surat'   => $nomor,
 						'tanggal_surat' => date('d/m/Y'),
 						'tanggal_kadaluarsa'  => date('d/m/Y', strtotime('+1 month')),
+						'user_nama'          =>  $user_nama,
+						'user_nik'          =>  $user_nik,
+						'user_jekel'          =>  $user_jekel,
+						'user_tempatlahir'          =>  $user_tempatlahir,
+						'user_ttl'          =>  $user_ttl,
+						'user_agama'          =>  $user_agama,
+						'user_pekerjaan'          =>  $user_pekerjaan,
+						'user_alamat'          =>  $user_alamat,	
+						'user_rt'          =>  $user_rt,	
+						'user_rw'          =>  $user_rw,
 						'keperluan'     => $keperluan,
 						'file_kk'       => $filekk,
 						'file_ktp'      => $filektp,

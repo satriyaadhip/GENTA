@@ -97,7 +97,16 @@ class Skk extends CI_Controller
 				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKK</span> karena masih ada yang belum terverifikasi !');
 				redirect('list-surat', 'refresh');
 			} else {
-
+				$user_nama = $this->input->post('user_nama');
+				$user_nik = $this->input->post('user_nik');
+				$user_jekel = $this->input->post('user_jekel');
+				$user_tempatlahir = $this->input->post('user_tempatlahir');
+				$user_ttl = $this->input->post('user_ttl');
+				$user_agama = $this->input->post('user_agama');
+				$user_pekerjaan = $this->input->post('user_pekerjaan');
+				$user_alamat = $this->input->post('user_alamat');
+				$user_rt = $this->input->post('user_rt');
+				$user_rw = $this->input->post('user_rw');
 				$hubungan = $this->input->post('hubungan');
 				$nama = $this->input->post('nama_alm');
 				$bin = $this->input->post('bin');
@@ -144,6 +153,16 @@ class Skk extends CI_Controller
 					'nomor_surat'   => $nomor,
 					'tanggal_surat' => date('d/m/Y'),
 					'tanggal_kadaluarsa'  => date('d/m/Y', strtotime('+1 month')),
+					'user_nama'          =>  $user_nama,
+						'user_nik'          =>  $user_nik,
+						'user_jekel'          =>  $user_jekel,
+						'user_tempatlahir'          =>  $user_tempatlahir,
+						'user_ttl'          =>  $user_ttl,
+						'user_agama'          =>  $user_agama,
+						'user_pekerjaan'          =>  $user_pekerjaan,
+						'user_alamat'          =>  $user_alamat,	
+						'user_rt'          =>  $user_rt,	
+						'user_rw'          =>  $user_rw,
 					'hubungan'  => $hubungan,
 					'nama_alm'  => $nama,
 					'bin'   => $bin,

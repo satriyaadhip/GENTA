@@ -1,11 +1,21 @@
             <div class="main-content container-fluid">
             	<div class="page-title">
-            		<h4>Verifikasi Surat Domisili</h4>
+            		<h4>Surat Keterangan Pindah</h4>
             	</div>
+				<div class="col-lg-3 col-md-6 col-sm-3">
+                                            <a href="<?= base_url('skd/buat-surat') ?>">
+                                                <div class="mb-2" style="border-radius: 15px; background-image: linear-gradient(to bottom right, #ef8c50, #ef6445);" role="alert">
+                                                    <div class="alert-text mt-2 px-4 py-3">
+                                                        <img src="<?= base_url() ?>./assets/icons/logo_pindahdom.png" class="my-4" style="max-width: 64px; margin-top: 100px" />
+                                                        <h6 class="text-white">Surat Keterangan<br />Pindah</h6>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
             	<section class="section">
             		<div class="row">
             			<div class="col-lg-12">
-            				<div class="card">
+            				<div class="card shadow-none">
             					<div class="card-body">
             						<div class="table-responsive overflow-auto">
             							<table id="verifikasi" class="table table-striped table-bordered text-center" style="width:100%">
@@ -33,7 +43,7 @@
 															if ($data->status == 'Menunggu Verifikasi') {
 																echo '<span class="badge bg-warning">Menunggu Verifikasi</span>';
 															} else if ($data->status == 'Terverifikasi') {
-																echo '<span class="badge bg-primary">Terverifikasi</span>';
+																echo '<span class="badge bg-success">Diterima</span>';
 															} else if ($data->status == 'Diterima') {
 																echo '<span class="badge bg-success">Diterima</span>';
 															} else if ($data->status == 'Ditolak') {

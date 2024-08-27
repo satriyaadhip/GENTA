@@ -12,7 +12,7 @@ class SuratDomisili extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Verifikasi Surat Domisili',
+			'title' => 'GENTA | Surat Keterangan Pindah',
 			'datas'  => $this->M_verifikasi->getSkd()
 		);
 
