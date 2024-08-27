@@ -138,7 +138,7 @@ class Sktm extends CI_Controller
 					}
 
 					$this->M_surat->sktm($data);
-					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat !');
+					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat.');
 					redirect('list-surat', 'refresh');
 				}
 			}

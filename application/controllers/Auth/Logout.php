@@ -10,15 +10,15 @@ class Logout extends CI_Controller
 	{
 		if ($this->session->userdata('role_id') == 1) {
 			session_destroy();
-			redirect('administrator/login', 'refresh');
+			redirect('login', 'refresh');
 		}
 		if ($this->session->userdata('role_id') == 2) {
 			session_destroy();
-			redirect('administrator/login', 'refresh');
+			redirect('login', 'refresh');
 		}
 		if ($this->session->userdata('role_id') == 3) {
 			session_destroy();
-			redirect('user/login', 'refresh');
+			redirect('login', 'refresh');
 		}
 	}
 }

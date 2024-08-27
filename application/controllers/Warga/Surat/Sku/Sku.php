@@ -116,7 +116,7 @@ class Sku extends CI_Controller
 						$this->upload->data();
 					}
 					$this->M_surat->sku($data);
-					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat !');
+					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat.');
 					redirect('list-surat', 'refresh');
 				}
 			}

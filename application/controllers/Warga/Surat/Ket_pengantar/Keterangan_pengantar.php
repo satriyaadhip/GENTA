@@ -24,7 +24,7 @@ class Keterangan_pengantar extends CI_Controller
 
 	public function create()
 	{
-		$this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi !'));
+		$this->form_validation->set_rules('keperluan', 'Keperluan', 'required', array('required' => 'Keperluan permohonan harus diisi.'));
 
 		$cek = $this->M_surat->cek_skp();
 
@@ -34,13 +34,13 @@ class Keterangan_pengantar extends CI_Controller
 		} else {
 
 			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKP</span> karena masih ada yang belum terverifikasi !');
+				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKP</span> karena masih ada yang belum terverifikasi!');
 				redirect('list-surat', 'refresh');
 			} else {
 
 				$keperluan = $this->input->post('keperluan');
-				$file_kk = $_FILES['file_kk']['name'];
-				$file_ktp = $_FILES['file_ktp']['name'];
+				// $file_kk = $_FILES['file_kk']['name'];
+				// $file_ktp = $_FILES['file_ktp']['name'];
 
 				$user_nama = $this->input->post('user_nama');
 				$user_nik = $this->input->post('user_nik');
@@ -58,8 +58,8 @@ class Keterangan_pengantar extends CI_Controller
 				//acak nama gambar
 				$extensi1 = explode('.', $file_kk);
 				$extensi = strtolower(end($extensi1));
-				$acak_angka =  rand(1, 999);
-				$filekk = str_replace('', '', 'skp-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
+				// $acak_angka =  rand(1, 999);
+				// $filekk = str_replace('', '', 'skp-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
 
 				$date = date('Ymd-is');
 				$d2 = trim($date);
@@ -131,7 +131,7 @@ class Keterangan_pengantar extends CI_Controller
 						$this->upload->data();
 					}
 					$this->M_surat->skp($data);
-					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat !');
+					$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat.');
 					redirect('list-surat', 'refresh');
 				}
 			}

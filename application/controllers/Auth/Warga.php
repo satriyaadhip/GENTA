@@ -15,12 +15,15 @@ class Warga extends CI_Controller
 	{
 		$data = array(
 			'title' => 'Login Users',
+			'email' => 'warga@gmail.com',
+			'password' => 'warga'
 		);
-
+	
 		$this->load->view('auth/layout/header', $data);
 		$this->load->view('auth/login/warga', $data);
 		$this->load->view('auth/layout/footer', $data);
 	}
+	
 
 	public function loginUser()
 	{
@@ -59,6 +62,23 @@ class Warga extends CI_Controller
 			}
 		}
 	}
+
+// 	public function loginUser()
+// {
+//     $userLogin = array(
+//         'id_user'   => $userLogin['id_users'],
+// 						'id_warga'  => $userLogin['id_warga'],
+// 						'nama'      => $userLogin['nama'],
+// 						'email'     => $userLogin['email'],
+// 						'jekel'     => $userLogin['jekel'],
+// 						'role_id'   => $userLogin['role_id'],
+// 						'is_login'  => TRUE
+//     );
+//     $this->session->set_userdata($userLogin);
+//     $this->session->set_flashdata('success', 'Selamat datang kembali.');
+//     redirect('dashboard', 'refresh');
+// }
+
 
 	public function register()
 	{
@@ -102,7 +122,7 @@ class Warga extends CI_Controller
 		]);
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('error', 'Oppss... Terdapat kesalahan !');
+			$this->session->set_flashdata('error', 'Terdapat kesalahan.');
 			$this->register();
 		} else {
 			$nik = $this->input->post('nik');
@@ -113,7 +133,7 @@ class Warga extends CI_Controller
 			//query untuk cek data
 			$ceknik = $this->M_user->cekNik($nik);
 			if (!$ceknik) {
-				$this->session->set_flashdata('danger', 'Maaf, NIK tidak terdaftar !');
+				$this->session->set_flashdata('danger', 'Maaf, NIK tidak terdaftar.');
 				$this->register();
 			} else {
 				$data = array(
@@ -124,9 +144,11 @@ class Warga extends CI_Controller
 					'created_at'    => date('Y-m-d H:i:s')
 				);
 				$this->M_auth->created($data);
-				$this->session->set_flashdata('success', 'Register berhasil, silahkan login !');
+				$this->session->set_flashdata('success', 'Register berhasil, silahkan login');
 				redirect('user/login', 'refresh');
 			}
 		}
 	}
+
+
 }
