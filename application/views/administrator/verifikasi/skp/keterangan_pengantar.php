@@ -62,7 +62,7 @@
             													<?php } else if ($data->status == 'Terverifikasi') { ?>
             														<!-- <small class="text-center text-danger font-bold">No Action</small> -->
 																	<div class="btn-group">
-            															<a href="<?= base_url('cetak-surat-domisili/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
+            															<a href="<?= base_url('cetak-surat-pengantars/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
             															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
             																<i class="bi bi-trash-fill"></i>
             															</button>
@@ -87,20 +87,20 @@
             													<div class="modal fade" id="hapus<?= $data->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             														<div class="modal-dialog">
             															<div class="modal-content">
-            																<div class="modal-header bg-warning">
-            																	<h5 class="modal-title" id="exampleModalLabel">Konfirmasin Hapus Data</h5>
+																			<div class="modal-header bg-dark">
+            																	<h5 class="modal-title text-white" id="exampleModalLabel">Konfirmasi Hapus Data</h5>
             																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             																		<span aria-hidden="true">&times;</span>
             																	</button>
             																</div>
             																<div class="modal-body">
-            																	<div class="alert alert-danger" role="alert">
-            																		<h6 class="text-center">Yakin ingin menghapus data ini?</h6>
-            																		<small class="text-cen"><?= $data->nomor_surat ?></small>
+            																	<div class="alert" role="alert">
+            																		<h6 class="text-center text-dark">Yakin ingin menghapus data ini?</h6>
+            																		<small class="text-cen"><?= $data->nomor_surat ?><br><?= $data -> user_nama ?></small>
             																	</div>
             																</div>
             																<div class="modal-footer">
-            																	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+            																	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
             																	<a href="<?= base_url('hapus-surat-keterangan-pengantar/' . $data->id) ?>" class="btn btn-danger btn-sm">Hapus</a>
             																</div>
             															</div>

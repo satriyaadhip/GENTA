@@ -93,7 +93,7 @@ class User extends CI_Controller
 				'updated_at'    => date('Y-m-d H:i:s')
 			);
 			$this->M_user->updateUser($data, $id);
-			$this->session->set_flashdata('success', 'Data berhasil di update.');
+			$this->session->set_flashdata('success', 'Data berhasil diupdate..');
 			redirect('data-users', 'refresh');
 		} else {
 			$data = array(
@@ -102,7 +102,7 @@ class User extends CI_Controller
 				'updated_at'    => date('Y-m-d H:i:s')
 			);
 			$this->M_user->updateUser($data, $id);
-			$this->session->set_flashdata('success', 'Data berhasil di update.');
+			$this->session->set_flashdata('success', 'Data berhasil diupdate..');
 			redirect('data-users', 'refresh');
 		}
 	}
@@ -110,7 +110,7 @@ class User extends CI_Controller
 	public function delete($id)
 	{
 		$this->M_user->deleteUser($id);
-		$this->session->set_flashdata('danger', 'Data berhasil di hapus.');
+		$this->session->set_flashdata('danger', 'Data berhasil dihapus..');
 		redirect('data-users', 'refresh');
 	}
 

@@ -36,7 +36,7 @@ class SuratKeteranganPengantar extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->skpverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-keterangan-pengantar', 'refresh');
 		} else if ($status == 'Ditolak') {
 			$data = array(
@@ -46,7 +46,7 @@ class SuratKeteranganPengantar extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->skpverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-keterangan-pengantar', 'refresh');
 		} else {
 			$data = array(
@@ -56,7 +56,7 @@ class SuratKeteranganPengantar extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->skpverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-keterangan-pengantar', 'refresh');
 		}
 	}
@@ -89,7 +89,7 @@ class SuratKeteranganPengantar extends CI_Controller
 	public function hapus($id)
 	{
 		$this->M_verifikasi->hKeteranganP($id);
-		$this->session->set_flashdata('session', 'Data berhasil di hapus !');
+		$this->session->set_flashdata('session', 'Data berhasil dihapus.');
 		redirect('verifikasi-surat-keterangan-pengantar', 'refresh');
 	}
 }

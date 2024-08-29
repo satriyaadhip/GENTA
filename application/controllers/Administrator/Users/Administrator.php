@@ -60,7 +60,7 @@ class Administrator extends CI_Controller
                 'updated_at'    => date('Y-m-d H:i:s')
             );
             $this->M_admin->updateAdmin($data, $id);
-            $this->session->set_flashdata('success', 'Data berhasil di update !');
+            $this->session->set_flashdata('success', 'Data berhasil diupdate.');
             redirect('data-administrator', 'refresh');
         } else {
             $data = array(
@@ -72,7 +72,7 @@ class Administrator extends CI_Controller
                 'updated_at'    => date('Y-m-d H:i:s')
             );
             $this->M_admin->updateAdmin($data, $id);
-            $this->session->set_flashdata('success', 'Data berhasil di update !');
+            $this->session->set_flashdata('success', 'Data berhasil diupdate.');
             redirect('data-administrator', 'refresh');
         }
     }
@@ -80,7 +80,7 @@ class Administrator extends CI_Controller
     public function deleted($id)
     {
         $this->M_admin->deletedAdmin($id);
-        $this->session->set_flashdata('danger', 'Data berhasil di hapus !');
+        $this->session->set_flashdata('danger', 'Data berhasil dihapus.');
         redirect('data-administrator', 'refresh');
     }
 }

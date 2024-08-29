@@ -90,7 +90,6 @@
             														</div>
             													<?php } else if ($data->status == 'Ditolak') { ?>
             														<div class="btn-group">
-            															<button class="btn btn-info btn-sm" data-toggle="modal" data-target="#tambahKomentar<?= $data->id ?>">Komentar</button>
             															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
             																<i class="bi bi-trash-fill"></i>
             															</button>

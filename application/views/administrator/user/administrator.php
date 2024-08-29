@@ -74,7 +74,7 @@
                                                                                             <div class="form-group">
                                                                                                 <label for="">password</label>
                                                                                                 <input type="password" name="password" class="form-control">
-                                                                                                <small class="text-danger">*Kosongi password jika tidak di update !</small>
+                                                                                                <small class="text-danger">*Kosongi password jika tidak diupdate.</small>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <button class="btn btn-success btn-sm" type="submit">Simpan</button>

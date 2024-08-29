@@ -165,7 +165,7 @@ class Warga extends CI_Controller
 			'alamat' => $alamat,
 			'updated_at' => date('Y-m-d H:i:s')
 		);
-		$this->session->set_flashdata('success', 'Data warga berhasil di update !');
+		$this->session->set_flashdata('success', 'Data warga berhasil diupdate.');
 		$this->M_warga->edit($data, $id);
 		redirect('data-warga');
 	}
@@ -188,7 +188,7 @@ class Warga extends CI_Controller
 	public function delete($id)
 	{
 		$this->M_warga->delete($id);
-		$this->session->set_flashdata('danger', 'Data berhasil di hapus !');
+		$this->session->set_flashdata('danger', 'Data berhasil dihapus.');
 
 		redirect('data-warga', 'refresh');
 	}

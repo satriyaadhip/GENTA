@@ -35,7 +35,7 @@ class SuratKelahiran extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->spakverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-kelahiran', 'refresh');
 		} else if ($status == 'Ditolak') {
 			$data = array(
@@ -45,7 +45,7 @@ class SuratKelahiran extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->spakverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-kelahiran', 'refresh');
 		} else {
 			$data = array(
@@ -55,7 +55,7 @@ class SuratKelahiran extends CI_Controller
 				'updated_at'  => date('d-m-Y H:i:s')
 			);
 			$this->M_verifikasi->spakverif($data, $id);
-			$this->session->set_flashdata('success', 'Status berhasil di update !');
+			$this->session->set_flashdata('success', 'Status berhasil diupdate.');
 			redirect('verifikasi-surat-kelahiran', 'refresh');
 		}
 	}
@@ -88,7 +88,7 @@ class SuratKelahiran extends CI_Controller
 	public function hapus($id)
 	{
 		$this->M_verifikasi->hKelahiran($id);
-		$this->session->set_flashdata('success', 'Data berhasil di hapus !');
+		$this->session->set_flashdata('success', 'Data berhasil dihapus.');
 		redirect('verifikasi-surat-kelahiran', 'refresh');
 	}
 }
