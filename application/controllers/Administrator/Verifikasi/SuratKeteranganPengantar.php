@@ -11,7 +11,7 @@ class SuratKeteranganPengantar extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Verifikasi Surat Keterangan Pengantar',
+			'title' => 'GENTA | Surat Keterangan Pengantar',
 			'datas' => $this->M_verifikasi->getSkp(),
 		);
 

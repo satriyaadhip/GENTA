@@ -11,7 +11,7 @@ class SuratKelahiran extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Verifikasi Surat Kelahiran',
+			'title' => 'GENTA | Surat Akte Kelahiran',
 			'datas'  => $this->M_verifikasi->getSpak()
 		);
 

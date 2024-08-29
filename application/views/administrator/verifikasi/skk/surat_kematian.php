@@ -65,7 +65,13 @@
             															</form>
             														</div>
             													<?php } else if ($data->status == 'Terverifikasi') { ?>
-            														<small class="text-center text-danger font-bold">No Action</small>
+																	<!-- <small class="text-center text-danger font-bold">No Action</small> -->
+																	<div class="btn-group">
+            															<a href="<?= base_url('cetak-surat-domisili/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
+            															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
+            																<i class="bi bi-trash-fill"></i>
+            															</button>
+            														</div>
             													<?php } else if ($data->status == 'Diterima') { ?>
             														<div class="btn-group">
             															<a href="<?= base_url('cetak-surat-kematian/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
@@ -88,14 +94,14 @@
             														<div class="modal-dialog">
             															<div class="modal-content">
             																<div class="modal-header bg-warning">
-            																	<h5 class="modal-title" id="exampleModalLabel">Konfirmasin Hapus Data</h5>
+            																	<h5 class="modal-title" id="exampleModalLabel">Konfirmasi Hapus Data</h5>
             																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             																		<span aria-hidden="true">&times;</span>
             																	</button>
             																</div>
             																<div class="modal-body">
             																	<div class="alert alert-danger" role="alert">
-            																		<h6 class="text-center">Apakah Anda yakin menghapus data surat ini ?</h6>
+            																		<h6 class="text-center">Yakin ingin menghapus data ini?</h6>
             																		<small class="text-cen"><?= $data->nomor_surat ?></small>
             																	</div>
             																</div>

@@ -12,7 +12,7 @@ class SuratKematian extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title' => 'Verifikasi Surat Keterangan Kematian',
+			'title' => 'GENTA | Surat Keterangan Kematian',
 			'datas'  => $this->M_verifikasi->getSkk()
 		);
 

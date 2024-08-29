@@ -124,7 +124,7 @@ class Spak extends CI_Controller
 					$nomor  = sprintf("%03s", abs(floatval($noid['id']) + 1)) . '/' . 'SKPAK' . '/' . date('m') . '/' . date('Y');
 					$data = array(
 						'id_warga'  => $this->session->userdata('id_warga'),
-						'jenis_surat'   => 'SURAT PENGANTAR AKTE KELAHIRAN',
+						'jenis_surat'   => 'SURAT AKTE KELAHIRAN',
 						'nomor_surat'   => $nomor,
 						'tanggal_surat' => date('d/m/Y'),
 						'tanggal_kadaluarsa'  => date('d/m/Y', strtotime('+1 month')),
