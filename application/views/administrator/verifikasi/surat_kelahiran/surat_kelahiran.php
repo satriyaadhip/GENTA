@@ -116,27 +116,27 @@
             													<?php } ?>
 
 																<div class="modal fade" id="hapus<?= $data->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            															<div class="modal-dialog">
-            																<div class="modal-content">
-            																	<div class="modal-header bg-warning">
-            																		<h5 class="modal-title" id="exampleModalLabel">Konfirmasin Hapus Data</h5>
-            																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            																			<span aria-hidden="true">&times;</span>
-            																		</button>
+            														<div class="modal-dialog">
+            															<div class="modal-content">
+            																<div class="modal-header bg-dark">
+            																	<h5 class="modal-title text-white" id="exampleModalLabel">Konfirmasi Hapus Data</h5>
+            																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            																		<span aria-hidden="true">&times;</span>
+            																	</button>
+            																</div>
+            																<div class="modal-body">
+            																	<div class="alert" role="alert">
+            																		<h6 class="text-center text-dark">Yakin ingin menghapus data ini?</h6>
+            																		<small class="text-cen"><?= $data->nomor_surat ?><br><?= $data -> user_nama ?></small>
             																	</div>
-            																	<div class="modal-body">
-            																		<div class="alert alert-danger" role="alert">
-            																			<h6 class="text-center">Apakah Anda yakin menghapus data surat ini ?</h6>
-            																			<small class="text-cen"><?= $data->nomor_surat ?></small>
-            																		</div>
-            																	</div>
-            																	<div class="modal-footer">
-            																		<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-            																		<a href="<?= base_url('hapus-surat-kelahiran/' . $data->id) ?>" class="btn btn-danger btn-sm">Hapus</a>
-            																	</div>
+            																</div>
+            																<div class="modal-footer">
+            																	<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
+            																	<a href="<?= base_url('hapus-surat-kelahiran/' . $data->id) ?>" class="btn btn-danger btn-sm">Hapus</a>
             																</div>
             															</div>
             														</div>
+            													</div>
 
             												<?php } else if ($this->session->userdata('role_id') == 2) { ?>
 
