@@ -67,7 +67,7 @@
             													<?php } else if ($data->status == 'Terverifikasi') { ?>
 																	<!-- <small class="text-center text-danger font-bold">No Action</small> -->
 																	<div class="btn-group">
-            															<a href="<?= base_url('cetak-surat-domisili/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
+            															<a href="<?= base_url('cetak-surat-kematian/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
             															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
             																<i class="bi bi-trash-fill"></i>
             															</button>
