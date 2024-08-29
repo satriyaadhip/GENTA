@@ -37,11 +37,6 @@
 
             <div class="identitas">
                 <?php foreach ($data as $d) { ?>
-                    <p class="text-end fw-bold">
-                        <small>
-                            <?= $d->tanggal_surat ?>
-                        </small>
-                    </p>
                     <span class="text-center">
                         <strong>
                             <p>
@@ -53,12 +48,20 @@
                 <?php } ?>
             </div>
             <div class="text-surat">
-                <p>Yang bertanda tangan di bawah ini Kepada Desa Gentan, Kecamatan Bulu, Kabupaten Sukoharjo,
-                    menerangkan dengan sebenarnya, bahwa:</p>
                 <table class="ms-5">
                     <?php foreach ($data as $d) { ?>
                         <tr>
-                            <td>Nama</td>
+                            <td>DATA DAERAH ASAL</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Nomor Kartu Keluarga</td>
+                            <td>: </td>
+                            <td><?= $d -> user_nama ?></td>
+                        </tr>
+                        <tr>
+                            <td>Nama Kepala Keluarga</td>
                             <td>: </td>
                             <td><?= $d -> user_nama ?></td>
                         </tr>

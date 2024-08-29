@@ -89,14 +89,14 @@ class Skk extends CI_Controller
 		$cek = $this->M_surat->cek_skk();
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('error', 'Form hasus diisi semua!');
+			$this->session->set_flashdata('error', 'Form tidak boleh kosong.');
 			$this->index();
 		} else {
 
-			if ($cek) {
-				$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKK</span> karena masih ada yang belum terverifikasi !');
-				redirect('list-surat', 'refresh');
-			} else {
+			// if ($cek) {
+			// 	$this->session->set_flashdata('error', 'Maaf, anda tidak dapat melakukan permohonan surat <span class="font-bold">SKK</span> karena masih ada yang belum terverifikasi!');
+			// 	redirect('list-surat', 'refresh');
+			// } else {
 				$user_nama = $this->input->post('user_nama');
 				$user_nik = $this->input->post('user_nik');
 				$user_jekel = $this->input->post('user_jekel');
@@ -118,8 +118,8 @@ class Skk extends CI_Controller
 				$statusperkawinan = $this->input->post('status_perkawinan_a');
 				$pekerjaan = $this->input->post('pekerjaan_a');
 				$alamat = $this->input->post('alamat_a');
-				$file_kk = $_FILES['file_kk']['name'];
-				$file_ktp = $_FILES['file_ktp']['name'];
+				// $file_kk = $_FILES['file_kk']['name'];
+				// $file_ktp = $_FILES['file_ktp']['name'];
 				$hari = $this->input->post('hari');
 				$tanggal_meninggal = $this->input->post('tanggal_meninggal');
 				$jam_meninggal = $this->input->post('jam_meninggal');
@@ -131,18 +131,18 @@ class Skk extends CI_Controller
 				$date = date('Ymd-is');
 				$d2 = trim($date);
 				//acak nama gambar
-				$extensi1 = explode('.', $file_kk);
-				$extensi = strtolower(end($extensi1));
-				$acak_angka =  rand(1, 999);
-				$filekk = str_replace('', '', 'skk-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
+				// $extensi1 = explode('.', $file_kk);
+				// $extensi = strtolower(end($extensi1));
+				// $acak_angka =  rand(1, 999);
+				// $filekk = str_replace('', '', 'skk-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
 
-				$date = date('Ymd-is');
-				$d2 = trim($date);
-				//acak nama gambar
-				$extensi1 = explode('.', $file_ktp);
-				$extensi = strtolower(end($extensi1));
-				$acak_angka =  rand(1, 999);
-				$filektp = str_replace('', '', 'skk-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
+				// $date = date('Ymd-is');
+				// $d2 = trim($date);
+				// //acak nama gambar
+				// $extensi1 = explode('.', $file_ktp);
+				// $extensi = strtolower(end($extensi1));
+				// $acak_angka =  rand(1, 999);
+				// $filektp = str_replace('', '', 'skk-id-' . $this->session->userdata('id_warga') . '-tgl' . $d2 . '-' . $acak_angka . '.' . $extensi);
 
 
 				$noid = $this->M_getData->getSkkId();
@@ -174,8 +174,8 @@ class Skk extends CI_Controller
 					'status_perkawinan_a' => $statusperkawinan,
 					'pekerjaan_a' => $pekerjaan,
 					'alamat_a' => $alamat,
-					'file_kk' => $filekk,
-					'file_ktp' => $filektp,
+					// 'file_kk' => $filekk,
+					// 'file_ktp' => $filektp,
 					'hari'  => $hari,
 					'tanggal_meninggal' => $tanggal_meninggal,
 					'jam_meninggal' => $jam_meninggal,
@@ -187,39 +187,39 @@ class Skk extends CI_Controller
 					'created_at' => date('Y-m-d H:i:s')
 				);
 
-				$config['upload_path'] = './assets/file_kk/'; //folder penyimpanana gambar
-				$config['file_name'] = $filekk;
-				$config['allowed_types'] = 'jpeg|png|jpg|JPEG|PNG|JPG';
-				$config['max_size'] = '3024';
-				$config['remove_space'] = TRUE;
-				$this->load->library('upload', $config);
-				$this->upload->initialize($config);
-				if (!$this->upload->do_upload('file_kk')) {
-					$this->session->set_flashdata('danger', $this->upload->display_errors());
+				// $config['upload_path'] = './assets/file_kk/'; //folder penyimpanana gambar
+				// $config['file_name'] = $filekk;
+				// $config['allowed_types'] = 'jpeg|png|jpg|JPEG|PNG|JPG';
+				// $config['max_size'] = '3024';
+				// $config['remove_space'] = TRUE;
+				// $this->load->library('upload', $config);
+				// $this->upload->initialize($config);
+				// if (!$this->upload->do_upload('file_kk')) {
+				// 	$this->session->set_flashdata('danger', $this->upload->display_errors());
 
-					redirect('skk/buat-surat', 'refresh');
-				} else {
-					$this->upload->data();
-				}
+				// 	redirect('skk/buat-surat', 'refresh');
+				// } else {
+				// 	$this->upload->data();
+				// }
 
-				$config['upload_path'] = './assets/file_ktp/'; //folder penyimpanana gambar
-				$config['file_name'] = $filektp;
-				$config['allowed_types'] = 'jpeg|png|jpg|JPEG|PNG|JPG';
-				$config['max_size'] = '3024';
-				$config['remove_space'] = TRUE;
-				$this->load->library('upload', $config);
-				$this->upload->initialize($config);
-				if (!$this->upload->do_upload('file_ktp')) {
-					$this->session->set_flashdata('danger', $this->upload->display_errors());
+				// $config['upload_path'] = './assets/file_ktp/'; //folder penyimpanana gambar
+				// $config['file_name'] = $filektp;
+				// $config['allowed_types'] = 'jpeg|png|jpg|JPEG|PNG|JPG';
+				// $config['max_size'] = '3024';
+				// $config['remove_space'] = TRUE;
+				// $this->load->library('upload', $config);
+				// $this->upload->initialize($config);
+				// if (!$this->upload->do_upload('file_ktp')) {
+				// 	$this->session->set_flashdata('danger', $this->upload->display_errors());
 
-					redirect('skk/buat-surat', 'refresh');
-				} else {
-					$this->upload->data();
-				}
+				// 	redirect('skk/buat-surat', 'refresh');
+				// } else {
+				// 	$this->upload->data();
+				// }
 				$this->M_surat->skk($data);
 				$this->session->set_flashdata('success', 'Permohonan surat berhasil dibuat.');
 				redirect('list-surat', 'refresh');
 			}
 		}
 	}
-}
+// }

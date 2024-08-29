@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>./assets/css/print.css">
 </head>
 
-
 <body>
     <div class="container mt-3 page">
         <div class="sub-page">
@@ -37,11 +36,7 @@
 
             <div class="identitas">
                 <?php foreach ($data as $d) { ?>
-                    <p class="text-end fw-bold">
-                        <small>
-                            <?= $d->tanggal_surat ?>
-                        </small>
-                    </p>
+                    
                     <span class="text-center">
                         <strong>
                             <p>
@@ -53,38 +48,64 @@
                 <?php } ?>
             </div>
             <div class="text-surat">
+            <?php
+$bulanIndo = [
+    '01' => 'Januari',
+    '02' => 'Februari',
+    '03' => 'Maret',
+    '04' => 'April',
+    '05' => 'Mei',
+    '06' => 'Juni',
+    '07' => 'Juli',
+    '08' => 'Agustus',
+    '09' => 'September',
+    '10' => 'Oktober',
+    '11' => 'November',
+    '12' => 'Desember'
+];
+
+if (!empty($d->tanggal_meninggal)) {
+    $tanggal = strtotime($d->tanggal_meninggal);
+    $hari = date('d', $tanggal);
+    $bulan = date('m', $tanggal);
+    $tahun = date('Y', $tanggal);
+    $formatTanggalIndo = $hari . ' ' . $bulanIndo[$bulan] . ' ' . $tahun;
+} else {
+    $formatTanggalIndo = 'Tanggal tidak tersedia';
+}
+?>
                 <p>Yang bertanda tangan di bawah ini:</p>
                 <table class="ms-5">
                     <?php foreach ($data as $d) { ?>
                         <tr>
                             <td>Nama</td>
                             <td>: </td>
-                            <td><?= $d -> user_nama ?></td>
+                            <td><?= $d->user_nama ?></td>
                         </tr>
                         <tr>
                             <td>NIK</td>
                             <td>: </td>
-                            <td><?= $d -> user_nik ?></td>
+                            <td><?= $d->user_nik ?></td>
                         </tr>
                         <tr>
                             <td>Tempat/Tanggal Lahir</td>
                             <td>: </td>
-                            <td><?= $d -> user_tempatlahir ?>, <?= $d -> user_ttl ?></td>
+                            <td><?= $d->user_tempatlahir ?>, <?= $d->user_ttl ?></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
                             <td>: </td>
-                            <td><?= $d -> user_jekel ?></td>
+                            <td><?= $d->user_jekel ?></td>
                         </tr>
                         <tr>
                             <td>RT/RW</td>
                             <td>: </td>
-                            <td><?= $d -> user_rt ?>/<?= $d -> user_rw ?></td>
+                            <td><?= $d->user_rt ?>/<?= $d->user_rw ?></td>
                         </tr>
                         <tr>
                             <td>Alamat</td>
                             <td>: </td>
-                            <td><?= $d -> user_alamat ?></td>
+                            <td><?= $d->user_alamat ?></td>
                         </tr>
                         <tr>
                             <td>Hubungan dengan yang meninggal</td>
@@ -126,7 +147,7 @@
                         <tr>
                             <td>Tanggal</td>
                             <td>: </td>
-                            <td><?= $d->tanggal_meninggal ?></td>
+                            <td><?= $formatTanggalIndo ?></td>
                         </tr>
                         <tr>
                             <td>Dimakamkan di</td>
@@ -139,7 +160,7 @@
                 <p style="text-align: justify;">
                     Demikian surat pernyataan ini saya buat dengan sebenar-benarnya dan apabila dikemudian hari
                     ternyata pernyataan saya ini tidak benar, maka saya bersedia diproses secara hukum sesuai
-                    peraturan perundang-undangan dan dokumen yangditerbitkan akibat dan pernyataan tidak benar
+                    peraturan perundang-undangan dan dokumen yang diterbitkan akibat dan pernyataan tidak benar
                     menjadi tidak sah/batal demi hukum.
                 </p>
                 <br>
@@ -155,7 +176,6 @@
     <script>
         window.print();
     </script>
-    </div>
     <script src="<?= base_url(); ?>./assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
