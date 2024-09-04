@@ -45,7 +45,7 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
                             <span>Verifikasi Surat</span>
                             <span class="badge badge bg-danger text-white"><?= $adminAll; ?></span>
                         </a>
-                        <ul class="submenu
+                        <ul class="submenu active
                         <?=
                         $this->uri->segment(1) == 'verifikasi-surat-domisili' ||
                             $this->uri->segment(1) == 'verifikasi-surat-usaha' ||
