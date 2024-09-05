@@ -14,6 +14,8 @@
             										<th>No</th>
             										<th>Jenis Surat</th>
             										<th>Nomor Surat</th>
+													<th>Tanggal Surat</th>
+													<th>Nama Pemohon</th>
             										<th>Status</th>
             										<th>Preview Data</th>
             										<th>Aksi</th>
@@ -23,8 +25,12 @@
             									<?php $n = 1;
 												foreach ($datas as $data) { ?>
             										<tr>
-            											<td><?= $n ?></td>
+														<td><?= $n ?></td>
+            											<td><?= $data->jenis_surat ?></td>
             											<td><?= $data->nomor_surat ?></td>
+														<td><?= $data->tanggal_surat ?></td>
+														<td><?= $data->user_nama ?></td>
+														
             											<td>
             												<?php
 															if ($data->status == 'Menunggu Verifikasi') {
@@ -62,7 +68,7 @@
             													<?php } else if ($data->status == 'Terverifikasi') { ?>
             														<!-- <small class="text-center text-danger font-bold">No Action</small> -->
 																	<div class="btn-group">
-            															<a href="<?= base_url('cetak-surat-pengantars/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
+            															<a href="<?= base_url('cetak-surat-keterangan-pengantar/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
             															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
             																<i class="bi bi-trash-fill"></i>
             															</button>

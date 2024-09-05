@@ -169,9 +169,9 @@ if ($this->session->userdata('role_id') == 1 || $this->session->userdata('role_i
             <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
                 <li class="dropdown">
                     <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                        <div class="avatar mr-1">
+                        <!-- <div class="avatar mr-1">
                             <img src="<?= base_url(); ?>./assets/images/avatar/avatar-s-1.png" alt="" srcset="">
-                        </div>
+                        </div> -->
                         <div class="d-none d-md-block d-lg-inline-block"><small><?= $this->session->userdata('nama') ?></small></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">

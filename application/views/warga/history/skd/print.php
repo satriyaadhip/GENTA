@@ -74,7 +74,8 @@
 
         .keterangan-desa{
             margin: 10px 0;
-            width: 100%;
+            margin-right: 30%;
+            width: 60%;
             font-size: 12px;
         }
 
@@ -150,7 +151,7 @@
                 <td><img src="<?= base_url() ?>./assets/logo/jpr.png"></td>
                 <td>
                     <div class="header-text">
-                        <p>PEMERINTAHAN KABUPATEN SUKOHARJO</p>
+                        <p>PEMERINTAH KABUPATEN SUKOHARJO</p>
                         <p>KECAMATAN BULU</p>
                         <p>DESA GENTAN</p>
                         <small>Jalan Batu Seribu No 10 Tlpn - Email<br>gentan3311022003@gmail.com Kode Pos 57563</small>

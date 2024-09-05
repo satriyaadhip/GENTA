@@ -17,7 +17,7 @@ class M_getData extends CI_Model
     public function getSkpId()
     {
         $this->db->select_max('id');
-        return $this->db->get('surat_domisili')->row_array();
+        return $this->db->get('surat_keterangan_pengantar')->row_array();
     }
 
     public function getSkkId()
